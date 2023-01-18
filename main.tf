@@ -37,9 +37,9 @@ resource "azurerm_windows_virtual_machine" "example" {
   name                = "example-machine"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
-  size                = "Standard_F2"
-  admin_username      = "vmadminuser123"
-  admin_password      = "13r9fech8bu23qnx1903dm$@i2ecn"
+  size                = "Standard_B1s"
+  admin_username      = "adminuser123"
+  admin_password      = "123P@ssw0rd!321" #not a real password
   network_interface_ids = [
     azurerm_network_interface.example.id,
   ]
@@ -52,7 +52,7 @@ resource "azurerm_windows_virtual_machine" "example" {
   source_image_reference {
     publisher = "MicrosoftWindowsServer"
     offer     = "WindowsServer"
-    sku       = "2016-Datacenter"
+    sku       = "2019-Datacenter"
     version   = "latest"
   }
 }
