@@ -7,6 +7,14 @@ variable "location" {
   type = string
 }
 
+variable "rg_info" {
+  type = object({
+    name     = string
+    location = string
+  })
+  #sensitive = true
+}
+
 ### Linux VM Variables
 variable "vm_name" {
   type = string

@@ -3,8 +3,8 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "windows-vm-rg"
-  location = "East US"
+  name     = var.rg_info.name
+  location = var.rg_info.location
 }
 
 resource "azurerm_virtual_network" "example" {
